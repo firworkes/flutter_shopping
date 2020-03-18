@@ -15,9 +15,7 @@ class _MessageState extends State<Message> {
        child: RaisedButton(
         child: Text('跳转到搜索页面'),
         onPressed: (){
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (context)=> Search())
-          );
+          Navigator.pushNamed(context, '/search');
         },
        )
     );
