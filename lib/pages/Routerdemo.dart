@@ -12,7 +12,25 @@ class RouterDemo extends StatelessWidget {
       appBar: AppBar(
         title: Text('路由demo'),
       ),
-      body: Text('这是路由传的值${arguments}'),
+      body: RoutContent(),
+    );
+  }
+}
+
+class RoutContent extends StatelessWidget {
+  const RoutContent({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: <Widget>[
+        RaisedButton(
+          child: Text('下一步'),
+          onPressed: (){
+            Navigator.pushNamed(context, '/register');
+          },
+        )
+      ],
     );
   }
 }

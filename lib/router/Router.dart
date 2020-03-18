@@ -3,12 +3,15 @@ import '../pages/Routerdemo.dart';
 import '../pages/RouteDemo2.dart';
 import '../pages/Search.dart';
 import '../tabs/tabs.dart';
+import '../pages/Register.dart';
+
 
 final Map routes = {
         '/': (context) => Tabs(),
         '/search': (context) => Search(),
         '/routerdemo': (context,{arguments}) => RouterDemo(arguments:arguments),
-        '/routedemo2': (context,{arguments}) => RouteDemo2(arguments:arguments)
+        '/routedemo2': (context,{arguments}) => RouteDemo2(arguments:arguments),
+        '/register': (context) => Register()
       };
 
 var onGenerateRoute=(RouteSettings settings) {
